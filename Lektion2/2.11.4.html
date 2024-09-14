@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var sum = 0;
+        var count = 0;
+        while (true) {
+            let num = +window.prompt('Очередное число:', 0);
+            if (num == 0) {
+                break;
+            }
+            sum += num
+            count++
+            console.log(`sum: ${sum}; count: ${count}`)
+        }
+
+        window.document.write(`<p>Среднее арифметическое: ${Math.floor(sum / count)}</p>`);
+
+    </script>
+</body>
+</html>

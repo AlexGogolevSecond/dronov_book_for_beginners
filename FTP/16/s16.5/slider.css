@@ -1,0 +1,34 @@
+.slider, section.slider-panel {
+    display: flex;
+    justify-content: center;
+}
+section.slider-panel {
+    height: 300px;
+}
+section.slider-panel img {
+    display: block;
+    height: 300px;
+}
+.slider {
+    width: 50%;
+    margin: 30px auto auto;
+}
+.slider a {
+    width: 20pt;
+    height: 20pt;
+    font-size: 20pt;
+    line-height: 20pt;
+    text-align: center;
+    margin: auto 10px;
+    border: thin solid grey;
+    color: black;
+    background-color: white;
+    cursor: pointer;
+    display: block;
+    text-decoration: none;
+}
+.slider a.active {
+    color: white;
+    background-color: black;
+    cursor: auto;
+}

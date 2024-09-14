@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <link href="styles.css" rel="stylesheet" type="text/css">
+        <script src="ajaxloader.js" type="text/javascript"></script>
+        <script src="pglist.js" type="text/javascript"></script>
+        <script src="pgitem.js" type="text/javascript"></script>
+        <script src="pgadd.js" type="text/javascript"></script>
+        <script src="pg404.js" type="text/javascript"></script>
+    </head>
+    <body>
+    </body>
+</html>
+<script type="text/javascript">
+    let component;
+    function route() {
+        let hash = location.hash;
+        const getRE = /get=(\d+)/i;
+        const listRE = /(\d+)/i;
+        let result;
+        if (result = getRE.exec(hash))
+            component = new PGItem(result[1]);
+        else if (result = listRE.exec(hash))
+            component = new PGList(result[1]);
+        else if (hash == '#add')
+            component = new PGAdd();
+        else if (!hash)
+            component = new PGList();
+        else
+            component = new PG404();
+    }
+    window.addEventListener('hashchange', route);
+    route();
+</script>

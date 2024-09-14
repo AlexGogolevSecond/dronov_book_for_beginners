@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Коды клавиш</title>
+    </head>
+    <body>
+        <h1>Коды клавиш</h1>
+        <p>Обозначение: <span id="keyValue"></span></p>
+        <p>Код: <span id="code"></span> (0x<span id="codeHex"></span>)</p>
+    </body>
+</html>
+<script type="text/javascript">
+    const keyValue = document.getElementById('keyValue');
+    const code = document.getElementById('code');
+    const codeHex = document.getElementById('codeHex');
+    document.body.onkeydown = function(evt) {
+        keyValue.textContent = evt.key;
+        code.textContent = evt.which;
+        codeHex.textContent = evt.which.toString(16);
+    };
+</script>

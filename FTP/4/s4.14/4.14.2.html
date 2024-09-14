@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Текущая дата</title>
+    </head>
+    <body>
+        <h1>Текущая дата</h1>
+        <script type="text/javascript">
+            const d = new Date();
+            const months = ['января', 'февраля', 'марта', 'апреля', 'мая',
+                'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября',
+                'декабря'];
+            window.document.write('<p>Сегодня ', d.getDate(), ' ',
+                months[d.getMonth()], ' ', d.getFullYear(), ' г.</p>');
+        </script>
+    </body>
+</html>

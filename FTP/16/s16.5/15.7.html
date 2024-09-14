@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Фотогалерея с лайтбоксом</title>
+        <link href="photogallery.css" rel="stylesheet" type="text/css">
+        <script src="photogallery.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <h1>Фотогалерея с лайтбоксом</h1>
+        <nav id="pg1">
+        </nav>
+    </body>
+</html>
+<script type="text/javascript">
+    const cnfg1 = {
+        images: ['images/1.jpg', 'images/2.jpg', 'images/3.jpg', 'images/4.jpg',
+            'images/5.jpg', 'images/6.jpg', 'images/7.jpg']
+    };
+    const pg1 = new PhotoGallery('pg1', cnfg1);
+</script>

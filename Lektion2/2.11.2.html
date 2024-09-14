@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>пересчёт величин</h1> 
+    <script>
+        //'use strict';
+        const ins = window.prompt('Величина в дюймах', 0);
+
+        if (ins == null)
+            window.document.write('<p>Величина не была введена!</p>');
+        else if (ins < 0)
+            window.document.write('<p>Величина не может быть отрицательной!</p>');
+        else {
+            const cents = (ins * 2.54) + ' см.';
+            //ins = parseInt(ins);
+            let duym_str;
+            /*
+            когда:
+                1 - дюйм
+                2,3,4 -дюйма
+                5,6,7,8.9,10 ... - дюймов
+                21 - дюйм
+                22 - дюйма
+                ...
+                ниже Math.floor(ins) нужен для того, что бы преобразовать строку в число. Менять ins мы не можем, т.к. это константа
+            */
+            switch (Math.floor(ins)) {
+                case 1:
+                    duym_str = 'дюйм';
+                    break;
+                case 2:
+                case 3:
+                case 4:
+                    duym_str = 'дюйма';
+                    break;
+
+                default:
+                    duym_str ="дюймов";
+            }
+
+            window.document.write('<p>', ins, ' ', duym_str, '</p>');
+            window.document.write('<p>', cents, '</p>');
+            var a = 10;  // в этом случае можно обращаться к переменной a за пределами блока
+        }
+        let b = a;  // ошибки нет
+        console.log('b: ' + b)
+            
+        
+        /*
+        let cents = 'Величина не была введена';
+        if (ins != null)
+            cents = (ins * 2.54) + ' см.';
+        */
+        
+    </script>
+</body>
+</html>

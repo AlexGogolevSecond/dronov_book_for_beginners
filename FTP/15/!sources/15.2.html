@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Слайдер</title>
+        <style type="text/css">
+            section, nav {
+                display: flex;
+                justify-content: center;
+            }
+            section {
+                height: 300px;
+            }
+            section img {
+                display: block;
+                height: 300px;
+            }
+            nav {
+                width: 50%;
+                margin: 30px auto auto;
+            }
+            nav a {
+                width: 20pt;
+                height: 20pt;
+                font-size: 20pt;
+                line-height: 20pt;
+                text-align: center;
+                margin: auto 10px;
+                border: thin solid grey;
+                color: black;
+                background-color: white;
+                cursor: pointer;
+                display: block;
+                text-decoration: none;
+            }
+            nav a.active {
+                color: white;
+                background-color: black;
+                cursor: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <section>
+            <img id="output" src="images/1.jpg">
+        </section>
+        <nav id="buttonset">
+            <a href="images/1.jpg" class="active">1</a>
+            <a href="images/2.jpg">2</a>
+            <a href="images/3.jpg">3</a>
+        </nav>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Тригонометрические функции</title>
+    </head>
+    <body>
+        <h1>Тригонометрические функции</h1>
+        <table>
+            <tr><th>Угол</th><th>sin</th><th>cos</th><th>tg</th></tr>
+            <script type="text/javascript">
+                let angle, ar;
+                const c = Math.PI / 180;
+                for (angle = 0; angle <= 90; angle += 15) {
+                    ar = angle * c;
+                    window.document.write('<tr>');
+                    window.document.write('<td>', angle, '</td>');
+                    window.document.write('<td>', Math.sin(ar), '</td>');
+                    window.document.write('<td>', Math.cos(ar), '</td>');
+                    window.document.write('<td>', Math.tan(ar), '</td>');
+                    window.document.write('</tr>');
+                }
+            </script>
+        </table>
+    </body>
+</html>

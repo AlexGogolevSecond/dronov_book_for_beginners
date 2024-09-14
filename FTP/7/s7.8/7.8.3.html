@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Конструирование элементов</title>
+        <script type="text/javascript" src="7.8.js"></script>
+    </head>
+    <body>
+    </body>
+</html>
+<script type="text/javascript">
+    const h1 = document.createElement('h1');
+    h1.textContent = atom.name;
+    document.body.appendChild(h1);
+    let p = document.createElement('p');
+    p.textContent = atom.desc;
+    document.body.appendChild(p);
+    p = document.createElement('p');
+    p.textContent = 'Достоинства:';
+    document.body.appendChild(p);
+    let ul = document.createElement('ul');
+    let li, i;
+    for (i = 0; i < atom.pros.length; ++i) {
+        li = document.createElement('li');
+        li.textContent = atom.pros[i];
+        ul.appendChild(li);
+    }
+    document.body.appendChild(ul);
+    p = document.createElement('p');
+    p.textContent = 'Недостатки:';
+    document.body.appendChild(p);
+    ul = document.createElement('ul');
+    for (i = 0; i < atom.contras.length; ++i) {
+        li = document.createElement('li');
+        li.textContent = atom.contras[i];
+        ul.appendChild(li);
+    }
+    document.body.appendChild(ul);
+    p = document.createElement('p');
+    let a = document.createElement('a');
+    a.href = atom.site;
+    a.textContent = 'Официальный сайт';
+    p.appendChild(a);
+    document.body.appendChild(p);
+</script>
