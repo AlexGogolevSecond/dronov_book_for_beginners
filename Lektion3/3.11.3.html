@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function average() {
+            let l = arguments.length, i;
+            let count = 1;
+            let sum = 0;
+            for (i = 0; i < l; i++) {
+                let el = arguments[i];
+                if (!isNaN(el)) {
+                    count += 1;
+                    sum += Number(el);
+                }
+            }
+            window.document.write('<p> average: ',sum / count,'</p>');
+
+        }
+        //average(10,20,30,40,50,60,70,80,90,100);
+        average(10,'20',30,'40',50,'60',70,'80','90','100', '110');
+
+    </script>
+</body>
+</html>
