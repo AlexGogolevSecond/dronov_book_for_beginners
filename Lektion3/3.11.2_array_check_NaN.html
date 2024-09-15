@@ -7,15 +7,23 @@
 </head>
 <body>
     <script>
-        function listValues() {
+        function average() {
             let l = arguments.length, i;
-            window.document.write('<ul>');
+            let count = 1;
+            let sum = 0;
             for (i = 0; i < l; i++) {
-                window.document.write('<li>', arguments[i], '</li>');
+                let el = arguments[i];
+                if (!isNaN(el)) {
+                    count += 1;
+                    sum += Number(el);
+                }
             }
-            window.document.write('</ul>');
+            window.document.write('<p> average: ',sum / count,'</p>');
+
         }
-        listValues('HTML', 'CSS', 'JavaScript');
+        //average(10,20,30,40,50,60,70,80,90,100);
+        average(10,'20',30,'40',50,'60',70,'80','90','100', '110');
+
     </script>
 </body>
 </html>
