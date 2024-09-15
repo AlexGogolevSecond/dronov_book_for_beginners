@@ -7,7 +7,12 @@
 </head>
 <body>
     <script>
-        
+        let globalVar = 123;
+        function some(){
+            window.document.write('<p>lalala</p>');
+            window.document.write(`<p>globalVar: ${globalVar}</p>`);
+        }
+        some()
 
     </script>
 </body>
