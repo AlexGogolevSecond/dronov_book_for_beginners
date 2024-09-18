@@ -9,12 +9,22 @@
     <script>
         function average2() {
             let l = arguments.length, i, j;
-            let count = 1;
+            let count = 0;
             let sum = 0;
             for (i = 0; i < l; i++) {
                 let el = arguments[i];
-                                
-                if (!isNaN(el)) {
+                // нужно определить, el - это список или нет
+                if (el instanceof Array) {
+                    for (j = 0; j < el.length; j++) {
+                        el2 = el[j];
+                        if (!isNaN(el2)) {
+                            console.log('<p>el2:', el2,'</p>');
+                            count += 1;
+                            sum += Number(el2);
+                        }
+                    }
+                }
+                else if (!isNaN(el)) {
                     count += 1;
                     sum += Number(el);
                 }
@@ -23,7 +33,8 @@
 
         }
         //average(10,20,30,40,50,60,70,80,90,100);
-        average2(10,'20',30,'40',50,'60',70,'80','90','100', '110');
+        //average2(10,'20',30,'40',50,'60',70,'80','90','100', '110', [1,2,3], 55);
+        //average2(10,[10,20,30], 50);
 
     </script>
 </body>
