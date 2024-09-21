@@ -20,8 +20,9 @@
         let ins = window.prompt('Величина в дюймах', 0);  //string
         ins = ins.replace(',', '.');
         let cents;
-        if (ins == null)
+        if (ins == null) {
             cents = 'Величина не была введена!';
+        }
         else if (ins < 0)
             cents = 'Величина не может быть отрицательной!'
         else
