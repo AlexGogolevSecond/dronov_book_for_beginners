@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>пересчёт величин</h1> 
+    <script>
+        let ins = window.prompt('Величина в дюймах', 0);
+        
+        let cents;
+        if (ins == null)
+            cents = 'Величина не была введена!';
+        else if (ins < 0)
+            cents = 'Величина не может быть отрицательной!'
+        else
+            cents = (ins * 2.54) + ' см.';
+        
+        /*
+        let cents = 'Величина не была введена';
+        if (ins != null)
+            cents = (ins * 2.54) + ' см.';
+        */
+        window.document.write('<p>', cents, '</p>');
+    </script>
+</body>
+</html>
