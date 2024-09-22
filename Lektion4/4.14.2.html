@@ -22,7 +22,7 @@
         let sum = 0;
         arr.forEach((el) => sum += parseInt(el));
         //console.log(`sum: ${sum}`);
-        window.document.write('<p>', 'Среднее арифметическое: ', sum / arr.length, '</p>');
+        window.document.write('<p>', 'Среднее арифметическое: ', (sum / arr.length).toFixed(2), '</p>');
 
         
         //window.document.write('<p>', cents, '</p>');
