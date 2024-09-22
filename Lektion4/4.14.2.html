@@ -6,7 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>пересчёт величин</h1>
     <script>
     /*
     Напишите страницу 4.14.1.html со сценарием, который получит от пользователя
@@ -18,24 +17,15 @@
     подойдет в этом случае.
     */
 
-        let ins = window.prompt('Величина в дюймах', 0);  //string
-        ins = ins.replace(',', '.');
-        let cents;
-        if (ins == null) {
-            cents = 'Величина не была введена!';
-        }
-        else if (ins < 0)
-            cents = 'Величина не может быть отрицательной!'
-        else
-            cents = (ins * 2.54) + ' см.';
+        let ins = window.prompt('Введите список чисел через запятую', 0);  //string
+        let arr = ins.split(',');
+        let sum = 0;
+        arr.forEach((el) => sum += parseInt(el));
+        //console.log(`sum: ${sum}`);
+        window.document.write('<p>', 'Среднее арифметическое: ', sum / arr.length, '</p>');
 
-        /*
-        let cents = 'Величина не была введена';
-        if (ins != null)
-            cents = (ins * 2.54) + ' см.';
-        */
         
-        window.document.write('<p>', cents, '</p>');
+        //window.document.write('<p>', cents, '</p>');
     </script>
 </body>
 </html>
