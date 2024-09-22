@@ -13,6 +13,13 @@
     Подсказка: превратите полученную от пользователя строку в массив, содержа­
     щий отдельные числа, и отсортируйте его.
     */
+    let ins = window.prompt('Введите список чисел через запятую', 0);  //string
+    let arr = ins.split(',');
+    //let arr2 = arr.map((el) => parseInt(el));
+    let arr2 = arr.map(Number);  // так ещё оптимальнее
+    //console.log(arr2);
+       
+
     </script>
 </body>
 </html>
