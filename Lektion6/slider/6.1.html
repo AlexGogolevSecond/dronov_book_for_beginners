@@ -86,11 +86,16 @@
     );
 
     function showPreview(evt) {
+        // обработчик события mouseover
         //evt - объект класса MouseEvent, представляющий событие
         preview.style.left = evt.pageX + 'px';
         preview.style.top = evt.pageY + 'px';
         preview.style.backgroundImage = 'url(' + getImageURL(this.id) + ')';
         preview.className = 'active';
-
     }
+    function hidePreview(){
+        // обработчик события mouseout
+        preview.className = '';
+    }
+
 </script>
