@@ -82,7 +82,12 @@
         });
     }
     buttons.forEach(
-        (el) => { el.addEventListener('click', showImage) }
+        (el) => {
+            el.addEventListener('click', showImage);
+            el.addEventListener('mouseover', showPreview);
+            el.addEventListener('mouseput', hidePreview);
+
+        }
     );
 
     function showPreview(evt) {
@@ -97,5 +102,5 @@
         // обработчик события mouseout
         preview.className = '';
     }
-
+вв
 </script>
