@@ -72,7 +72,7 @@
     const buttons = window.document.querySelectorAll('nav div');
     let current = buttons[0];
     function showImage() {
-        current = this;
+        current = this;  // в this хранится объект элемента страницы, к которому привязан обработчик
         output.src = getImageURL(this.id)  //'images/' + this.id + '.jpg';
         buttons.forEach((el) => {
             if (el == this)
