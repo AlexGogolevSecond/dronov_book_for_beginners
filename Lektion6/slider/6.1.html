@@ -53,7 +53,7 @@
         <section>
             <img id="output" src="images/1.jpg">
         </section>
-        <nav>
+        <nav id="buttonset">
             <div id="1" class="active">1</div>
             <div id="2">2</div>
             <div id="3">3</div>
@@ -70,8 +70,11 @@
 
     const output = window.document.getElementById('output');
     const buttons = window.document.querySelectorAll('nav div');
+    const buttonset = window.document.getElementById('buttonset');
+
     let current = buttons[0];
-    function showImage() {
+    function showImage(evt) {
+        /*
         current = this;  // в this хранится объект элемента страницы, к которому привязан обработчик
         output.src = getImageURL(this.id)  //'images/' + this.id + '.jpg';
         buttons.forEach((el) => {
@@ -80,7 +83,24 @@
             else
                 el.className = '';
         });
+        */
+        // меняем поведение:
+        console.log(`!!! evt.target: ${evt.target}`);
+        console.log(`!!! evt.target.id: ${evt.target.id}`);
+        console.log(`!!! this: ${this}; this.id: ${this.id}`);
+        if (evt.target == this) {
+            current = evt.target;
+            output.src = getImageURL(evt.target.id);
+            buttons.forEach((el) => {
+                if (el == this)
+                    el.className = 'active';
+                else
+                    el.className = '';
+            });
+        }
+
     }
+
     buttons.forEach(
         (el) => {
             el.addEventListener('click', showImage);
